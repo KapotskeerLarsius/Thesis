@@ -40,12 +40,9 @@ angle = input("What angle value do you want to check? Values can be: angle, no_a
 # Get the directory of the current script
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Construct the path to the Measurements folder
-measurements_folder = os.path.join(current_dir,"Measurements")
-
 # Path to folders with depth and RGB data
-depth_np_folder= measurements_folder+"\\Surface_area\\"+angle+"\\distance_"+curr_distance+"\\lux_"+lux+"\\depth_np_no_seg\\"
-color_folder = measurements_folder+"\\Surface_area\\"+angle+"\\distance_"+curr_distance+"\\lux_"+lux+"\\color_no_seg\\"
+depth_np_folder= current_dir+"\\Surface_area\\"+angle+"\\distance_"+curr_distance+"\\lux_"+lux+"\\depth_np_no_seg\\"
+color_folder = current_dir+"\\Surface_area\\"+angle+"\\distance_"+curr_distance+"\\lux_"+lux+"\\color_no_seg\\"
 folder_paths = [color_folder,depth_np_folder]
 check_folder(color_folder)
 check_folder(depth_np_folder)
